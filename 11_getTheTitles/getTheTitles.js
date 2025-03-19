@@ -1,11 +1,10 @@
 const getTheTitles = function(books) {
-    const titles = [];
-    
-    books.forEach(element => {
-        titles.push(element.title);
-    });
+    const arrayOfTitles = books.reduce((titles, book) => {
+        titles.push(book.title);
+        return titles;
+    }, [])
 
-    return titles;
+    return arrayOfTitles;
 };
 
 // Do not edit below this line
